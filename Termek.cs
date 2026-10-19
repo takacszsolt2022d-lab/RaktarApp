@@ -14,15 +14,16 @@ namespace RaktarApp
             get { return alapar; }
             set
             {
-                if (value <= 0)
-                {
-                    alapar = 1000;
-                }
-                
+                if (value <= 0) alapar = 1000;
+                else alapar= value;
+                    
             }
         }
         private static int osszesTermekSzama;
-        public static int OsszesTermekSzama;
+        public static int OsszesTermekSzama
+        {
+            get { return  osszesTermekSzama;}
+        }
       
         public Termek(string cikkszam, int alapar)
         {
